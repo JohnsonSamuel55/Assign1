@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import './App.css'
 
 interface Quote{
   _id: string;
@@ -65,7 +64,7 @@ return (
       </div>
       {
         resultQuotes.map((resultQuote)=> (
-          <div key={resultQuote._id}>
+          <div class="Results" key={resultQuote._id}>
             <p>{resultQuote?.author}</p>
             <p>{resultQuote?.content}</p>
           </div>
