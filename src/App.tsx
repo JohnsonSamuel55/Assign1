@@ -8,14 +8,13 @@ interface Quote{
 }
 
 export function App () {
-  const [result, setResult] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [resultQuotes, setResultQuotes] = useState<Quote[]>([]);
   const [randomQuote, setRandomQuote] = useState<Quote | null>(null);
 
   function noRefresh(event){
-    setResult(searchTerm);
     event.preventDefault();
+    loadQuotes();
   }
 
   async function loadRandomQuote() {
@@ -32,10 +31,6 @@ export function App () {
     if (quotes.count === 0) return;
     setResultQuotes(quotes);
   }
-  
-    useEffect(() => {
-      loadQuotes()
-    }, [result]);
 
     useEffect(() => {
     loadRandomQuote()
