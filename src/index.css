@@ -10,3 +10,57 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+* {
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color: #a8dadc;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#root{
+  height: 100%;
+}
+
+.RandomQoute{
+  padding: 16px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.Search{
+  text-align: center;
+}
+
+.Outer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  height: 100vh;
+}
+
+.Result {
+  border-radius: 16px;
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1faee;
+}
+
+.SearchBar{
+  border-radius: 8px;
+  width: 100%;
+  font-size: x-large;
+}
+
+.Submit{
+  display: none;
+}
